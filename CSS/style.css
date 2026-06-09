@@ -787,7 +787,7 @@ footer {
 
 .bg-login {
     min-height: calc(100vh - 60px);
-    background-image: url('../img/login.jpg'); 
+    background-image: url('../IMG/LOGIN.jpg'); 
     background-position: center;
     display: flex;
     align-items: center;
