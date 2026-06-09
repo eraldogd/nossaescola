@@ -1,318 +1,348 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nossa Escola - Landing Page</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="author" content="PI 2026 - GRUPO 03">
+    <meta name="description"  content="Sistema de gerenciamento de vagas e cursos">
+    <title>Nossa Escola</title>
+    <link rel="stylesheet" href="css/style.css">
+    
 </head>
-<body>
 
-    <div class="aviso-topo">
-        <span class="badge-amarelo">PRAZO</span> Confirmação de vagas — 1ª chamada encerra em 23/05/2026 às 18h. Acesse o sistema para confirmar sua inscrição.
+<body>
+    <div id="alerta-topo">
+        <span class="aviso-prazo">PRAZO</span>
+        <span class="texto-alerta">Confirmação de vagas — Resultado em 23/05 às 18h.</span>
     </div>
 
-    <nav class="menu-geral">
-        <div class="logo">
-            <div class="logo-icone">NE</div>
-            <div class="logo-texto">
-                <strong>NossaEscola</strong><br>
-                <small class="logo-subtexto">CED 03 SOBRADINHO</small>
+    <header>
+        <nav class="nav-principal">
+            <input type="checkbox" id="check-menu" style="display: none;">
+            <div class="logo">
+                <img src="IMG/LOGO.png" alt="Logo CED 03" class="logo-img">
+                <div class="logo-texto">
+                    <h1>Nossa Escola</h1>
+                    <span>CED 03 Sobradinho</span>
+                </div>
             </div>
-        </div>
-        
-        <ul class="menu-principal">
-            <li><a href="#">Cursos</a></li>
-            <li><a href="#">Inscrição</a></li>
-            <li><a href="#">Dúvidas</a></li>
-            <li><a href="#">Contato</a></li>
-            <li><a href="#">Sobre nós</a></li>
-        </ul>
-        
-        <a href="login.html" class="botao-primario">Acesso</a>
-    </nav>
-
-    <header class="hero">
-        <h1 class="hero-titulo">NOSSA ESCOLA</h1>
-        <p class="hero-subtitulo">GERENCIAMENTO DE VAGAS<br>EM CURSOS</p>
-        
-        <div class="hero-card">
-            <h2>Cursos 2026</h2>
-            <p>1º SEMESTRE • VAGAS ABERTAS<br>RESULTADO EM 20/05</p>
-        </div>
+            <div id="menu-principal" class="menu">
+                <a href="#cursos">Cursos</a>
+                <a href="#inscricao">Inscrição</a>
+                <a href="#duvidas">Dúvidas</a>
+                <a href="#contato">Contato</a>
+                <a href="#sobre">Sobre nós</a>
+                <a href="login.html" class="btn btn-primario btn-acesso-mobile">Acesso</a>
+            </div>
+            <div class="acoes-menu">
+                <a href="login.html" class="btn btn-primario btn-acesso">Acesso</a>
+                <label for="check-menu" id="botao-menu">☰</label>
+            </div>
+        </nav>
     </header>
 
-    <section class="sobre-escola">
-        <div class="sobre-texto">
-            <span class="tag-secao">SOBRE A ESCOLA</span>
-            <h2>Uma escola<br>que transforma<br><span class="texto-azul">trajetórias.</span></h2>
-            <p>O Centro Educacional 03 de Sobradinho é uma instituição pública de ensino fundamental e médio comprometida com a formação integral dos estudantes.</p>
-            <p>Oferecemos cursos avulsos semestrais em diversas áreas do conhecimento, abertos a alunos regularmente matriculados e da comunidade. A participação nos cursos segue critério de classificação por coeficiente de rendimento, conforme o Informe nº 08/2026 da Coordenação Pedagógica.</p>
-        </div>
-        <div class="sobre-img">
-            <img src="2149257236.jpg" alt="Estudantes na biblioteca">
-        </div>
-    </section>
-
-    <section class="opcoes-cursos">
-        <span class="tag-secao tag-centralizada">● INSCRIÇÕES ABERTAS — 1º SEMESTRE 2026</span>
-        <h2>Amplie seu percurso.<br>Escolha até 3 opções cursos.</h2>
-        <p>Alunos regularmente matriculados podem se inscrever em cursos.<br>Classificação por coeficiente de rendimento.</p>
-        <button class="botao-primario espaco-topo">Fazer login →</button>
-
-        <h3 class="titulo-cursos">Cursos disponíveis</h3>
-        <div class="lista-opcoes">
-            <div class="card-opcao">
-                <p>Ensino Fundamental</p>
-                <div class="icone-opcao">📖</div>
-            </div>
-            <div class="card-opcao">
-                <p>Ensino Médio</p>
-                <div class="icone-opcao">⚛️</div>
-            </div>
-            <div class="card-opcao">
-                <p>Comunidade Escolar *</p>
-                <div class="icone-opcao">👥</div>
-            </div>
-        </div>
-        <small class="nota-rodape">* Em breve, cursos e atividades disponíveis para a comunidade</small>
-    </section>
-
-    <section class="processo-inscricao">
-        <span class="tag-secao">COMO FAZER</span>
-        <h2>Processo de inscrição</h2>
-        <p class="subtitulo-secao">Siga as 5 etapas. Em caso de dúvida, consulte o Edital ou entre em contato com a Coordenação Pedagógica</p>
-        
-        <div class="lista-etapas">
-            <div class="card-etapa">
-                <h2>1</h2>
-                <strong>Acesse o sistema</strong>
-                <p>Login com matrícula e senha institucional.</p>
-            </div>
-            <div class="card-etapa">
-                <h2>2</h2>
-                <strong>Escolha até 3 cursos</strong>
-                <p>Selecione em ordem de preferência.</p>
-            </div>
-            <div class="card-etapa">
-                <h2>3</h2>
-                <strong>Aguarde</strong>
-                <p>Ordenação por coeficiente de rendimento.</p>
-            </div>
-            <div class="card-etapa">
-                <h2>4</h2>
-                <strong>Consulte resultado</strong>
-                <p>Publicado no sistema em 20/05.</p>
-            </div>
-            <div class="card-etapa etapa-destaque">
-                <h2>5</h2>
-                <strong>Confirme a vaga</strong>
-                <p>⚠ Prazo até 23/05 às 18h.</p>
+    <section id="hero">
+        <div class="container text-center">
+            <p class="hero-subtitulo">NOSSA ESCOLA</p>
+            <h2 class="hero-titulo">CREDENCIAMENTO DE VAGAS<br>EM CURSOS</h2>
+            <div class="hero-card">
+                <h3>Cursos 2026</h3>
+                <p>1º SEMESTRE - VAGAS ABERTAS</p>
+                <span class="hero-card-destaque">RESULTADO EM 23/05</span>
             </div>
         </div>
     </section>
 
-    <section class="info-importantes">
-        <div class="container">
-            <h2 class="titulo-info">Informações importantes</h2>
-            <div class="lista-info">
-                <div class="card-info">
-                    <strong>Período de inscrições</strong>
-                    <p>12-19/05/2026 (encerrado). Resultado preliminar em 20/05. Confirmação até 23/05 às 18h.</p>
-                </div>
-                <div class="card-info">
-                    <strong>Vagas disponíveis</strong>
-                    <p>102 vagas distribuídas em 5 cursos. Classificação por coeficiente de rendimento acumulado.</p>
-                </div>
-                <div class="card-info">
-                    <strong>Custo</strong>
-                    <p>Completamente gratuito para alunos regularmente matriculados, conforme a Resolução Interna nº 12/2024.</p>
-                </div>
-                <div class="card-info">
-                    <strong>Início das aulas</strong>
-                    <p>02/06/2026. Encerramento em dezembro. Aulas presenciais.</p>
+    <main id="sobre" class="secao-padrao">
+        <div class="container sobre-container">
+            <div class="sobre-texto">
+                <span class="tagline-azul">SOBRE A ESCOLA</span>
+                <h2 class="titulo-secao">Uma escola que transforma trajetórias.</h2>
+                <p class="subtexto-secao">
+                    O Centro Educacional 03 de Sobradinho é uma instituição pública de ensino fundamental 
+                    e de ensino médio comprometida com a formação integral dos estudantes.
+                </p>
+                <p class="subtexto-secao">
+                    Oferecemos cursos eletivos semestrais abertos a alunos matriculados no Ensino Médio. 
+                    A participação requer inscrição na coordenação, conforme o informe nº 02/2026.
+                </p>
+            </div>
+            <div class="sobre-carrossel">
+                <div class="carrossel-container">
+                    <img src="img/main-1.jpg" alt="Foto 1" class="carrossel-foto ativo">
+                    <img src="img/main-2.jpg" alt="Foto 2" class="carrossel-foto">
+                    <img src="img/main-3.jpg" alt="Foto 3" class="carrossel-foto">
+                    <img src="img/main-4.jpg" alt="Foto 4" class="carrossel-foto">
                 </div>
             </div>
         </div>
-    </section>
+    </main>
 
-    <section class="cursos-disponiveis">
-        <span class="tag-secao">ESCOLHA SEU CURSO</span>
-        <h2>Cursos disponíveis</h2>
-        <p class="subtitulo-secao">Navegue pelos 5 cursos disponíveis para este semestre.</p>
-
-        <div class="carrossel">
-            <button class="botao-circular">❮</button>
+   <section id="amplie-inscricao" class="secao-padrao bg-claro">
+        <div class="container text-center">
             
-            <div class="detalhe-curso">
-                <div class="cabecalho-curso">
-                    <h2>Programação Web</h2>
-                    <strong>18 vagas</strong>
-                </div>
-                
-                <div class="info-tecnica">
-                    <div class="info-item">
-                        <strong>Dias</strong>
-                        <p>Seg / Qua</p>
-                    </div>
-                    <div class="info-item">
-                        <strong>Horário</strong>
-                        <p>14h – 16h</p>
-                    </div>
-                    <div class="info-item">
-                        <strong>Turno</strong>
-                        <p>Tarde</p>
-                    </div>
-                </div>
+            <span class="tagline-azul">1º SEMESTRE DE 2026</span>
+            <h2 class="titulo-secao">Amplie seu percurso.<br>Escolha até 3 opções de cursos.</h2>
+            <p class="subtexto-secao">As matrículas serão realizadas exclusivamente no sistema on-line.</p>
+            
+            <a href="login.html" class="btn btn-primario" style="margin-bottom: 50px;">Fazer login ➔</a>
 
-                <p class="descricao-curso">Desenvolvimento front-end avançado utilizando linguagens modernas: HTML5 estruturado, CSS estrutural responsivo e arquiteturas básicas com JavaScript. Criação prática de portfólios autorais.</p>
+            <div class="grid-cards" style="text-align: left;">
+                <div class="card-padrao">
+                    <div class="numero-passo">1</div>
+                    <h4>Lançamento</h4>
+                    <p>Regras para participação e quadro de vagas.</p>
+                </div>
                 
-                <div class="rodape-curso">
-                    <span class="nome-professor">Prof. Carlos Silva</span>
-                    <button class="botao-primario">Fazer Inscrição</button>
+                <div class="card-padrao">
+                    <div class="numero-passo">2</div>
+                    <h4>Inscrição</h4>
+                    <p>Os estudantes se inscrevem pelo sistema.</p>
+                </div>
+                
+                <div class="card-padrao">
+                    <div class="numero-passo">3</div>
+                    <h4>Sorteio</h4>
+                    <p>Processo de seleção dos inscritos.</p>
+                </div>
+                
+                <div class="card-padrao">
+                    <div class="numero-passo">4</div>
+                    <h4>Resultado final</h4>
+                    <p>Lista final de contemplados.</p>
+                </div>
+                
+                <div class="card-padrao passo-destaque">
+                    <div class="numero-passo">5</div>
+                    <h4>Confirmação</h4>
+                    <p>Entrega dos documentos na escola.</p>
                 </div>
             </div>
 
-            <button class="botao-circular">❯</button>
-        </div>
-        
-        <div class="carrossel-pontos">
-            <span class="ponto ativo"></span>
-            <span class="ponto"></span>
-            <span class="ponto"></span>
-            <span class="ponto"></span>
-            <span class="ponto"></span>
         </div>
     </section>
 
-    <section class="duvidas-comuns">
-        <span class="tag-secao">PERGUNTAS E RESPOSTAS</span>
-        <h2 class="titulo-duvidas">Dúvidas comuns</h2>
-        <p class="subtitulo-secao">Não encontrou resposta? Entre em contato com a Coordenação Pedagógica</p>
+    <section id="cursos" class="secao-padrao">
+        <div class="container">
+            <span class="tagline-azul">CURSOS OFERTADOS</span>
+            <h2 class="titulo-secao">Cursos disponíveis</h2>
+            <p class="subtexto-secao">Navegue pelo nosso catálogo de cursos.</p>
 
-        <div class="lista-duvidas">
-            <details>
-                <summary>Quem pode se inscrever nos cursos avulsos?</summary>
-                <p>Alunos regularmente matriculados em qualquer curso do Instituto, desde que cumpridos os pré-requisitos de cada disciplina.</p>
-            </details>
-            <details>
-                <summary>Como funciona a classificação para as vagas?</summary>
-                <p>A classificação é baseada no coeficiente de rendimento do estudante.</p>
-            </details>
-            <details>
-                <summary>O que acontece se eu não confirmar a vaga?</summary>
-                <p>A vaga será repassada para o próximo aluno na lista de espera.</p>
-            </details>
-            <details>
-                <summary>Os cursos têm custo para o aluno?</summary>
-                <p>Não, são totalmente gratuitos.</p>
-            </details>
-            <details>
-                <summary>Como acessar o sistema pela primeira vez?</summary>
-                <p>Utilize sua matrícula e a senha padrão fornecida pela secretaria.</p>
-            </details>
-        </div>
-    </section>
+            <div class="css-carousel">
+                <input type="radio" name="slider" id="slide-1" checked>
+                <input type="radio" name="slider" id="slide-2">
+                <input type="radio" name="slider" id="slide-3">
+                <input type="radio" name="slider" id="slide-4">
 
-    <section class="secao-contato">
-        <div class="contato-container">
-            <div class="formulario-contato">
-                <span class="tag-secao">FALE CONOSCO</span>
-                <h2>Contato e localização</h2>
-                <p class="subtitulo-secao">Dúvidas sobre inscrições, documentação e prazos? Fale com a Coordenação Pedagógica.</p>
+                <div class="carousel-cards">
+                    
+                    <div class="card-wrapper">
+                        <label for="slide-4" class="btn-seta">⟨</label>
+                        <div class="card-detalhe-curso">
+                            <div class="card-topo-curso">
+                                <h3>Matemática Avançada</h3>
+                                <span class="vagas-badge">30 vagas</span>
+                            </div>
+                            <div class="card-grid-info">
+                                <div class="info-item"><span>Horário</span><strong>Seg/Qua 14h-16h</strong></div>
+                                <div class="info-item"><span>Duração</span><strong>6 meses</strong></div>
+                                <div class="info-item"><span>Nível</span><strong>Avançado</strong></div>
+                            </div>
+                            <p class="card-descricao">Curso de matemática para alunos do ensino médio com foco em preparação para vestibulares.</p>
+                            <div class="card-rodape-curso">
+                                <span class="prof-info">Prof. Carlos Silva</span>
+                                <a href="login.html" class="btn btn-primario">Fazer inscrição</a>
+                            </div>
+                        </div>
+                        <label for="slide-2" class="btn-seta">⟩</label>
+                    </div>
+
+                    <div class="card-wrapper">
+                        <label for="slide-1" class="btn-seta">⟨</label>
+                        <div class="card-detalhe-curso">
+                            <div class="card-topo-curso">
+                                <h3>Português e Redação</h3>
+                                <span class="vagas-badge">25 vagas</span>
+                            </div>
+                            <div class="card-grid-info">
+                                <div class="info-item"><span>Horário</span><strong>Ter/Qui 10h-12h</strong></div>
+                                <div class="info-item"><span>Duração</span><strong>6 meses</strong></div>
+                                <div class="info-item"><span>Nível</span><strong>Intermediário</strong></div>
+                            </div>
+                            <p class="card-descricao">Aperfeiçoamento em língua portuguesa e técnicas de redação dissertativa.</p>
+                            <div class="card-rodape-curso">
+                                <span class="prof-info">Prof. Ana Santos</span>
+                                <a href="login.html" class="btn btn-primario">Fazer inscrição</a>
+                            </div>
+                        </div>
+                        <label for="slide-3" class="btn-seta">⟩</label>
+                    </div>
+
+                    <div class="card-wrapper">
+                        <label for="slide-2" class="btn-seta">⟨</label>
+                        <div class="card-detalhe-curso">
+                            <div class="card-topo-curso">
+                                <h3>Programação Web</h3>
+                                <span class="vagas-badge">25 vagas</span>
+                            </div>
+                            <div class="card-grid-info">
+                                <div class="info-item"><span>Horário</span><strong>Ter/Qui 14h-16h</strong></div>
+                                <div class="info-item"><span>Duração</span><strong>8 meses</strong></div>
+                                <div class="info-item"><span>Nível</span><strong>Básico</strong></div>
+                            </div>
+                            <p class="card-descricao">Introdução ao desenvolvimento web com HTML, CSS e JavaScript.</p>
+                            <div class="card-rodape-curso">
+                                <span class="prof-info">Prof. João Oliveira</span>
+                                <a href="login.html" class="btn btn-primario">Fazer inscrição</a>
+                            </div>
+                        </div>
+                        <label for="slide-4" class="btn-seta">⟩</label>
+                    </div>
+
+                    <div class="card-wrapper">
+                        <label for="slide-3" class="btn-seta">⟨</label>
+                        <div class="card-detalhe-curso">
+                            <div class="card-topo-curso">
+                                <h3>História do Brasil</h3>
+                                <span class="vagas-badge">35 vagas</span>
+                            </div>
+                            <div class="card-grid-info">
+                                <div class="info-item"><span>Horário</span><strong>Seg/Qua 16h-18h</strong></div>
+                                <div class="info-item"><span>Duração</span><strong>5 meses</strong></div>
+                                <div class="info-item"><span>Nível</span><strong>Básico</strong></div>
+                            </div>
+                            <p class="card-descricao">Estudo aprofundado da história brasileira do período colonial à atualidade.</p>
+                            <div class="card-rodape-curso">
+                                <span class="prof-info">Prof. Mariana Costa</span>
+                                <a href="login.html" class="btn btn-primario">Fazer inscrição</a>
+                            </div>
+                        </div>
+                        <label for="slide-1" class="btn-seta">⟩</label>
+                    </div>
+
+                </div>
                 
-                <form>
-                    <div class="linha-dupla">
-                        <div class="campo">
-                            <label>NOME COMPLETO</label>
-                            <input type="text" placeholder="Seu nome completo">
-                        </div>
-                        <div class="campo">
-                            <label>MATRÍCULA</label>
-                            <input type="text" placeholder="Ex. 2024001234">
-                        </div>
+                <div class="cursos-dots">
+                    <label for="slide-1" class="dot"></label>
+                    <label for="slide-2" class="dot"></label>
+                    <label for="slide-3" class="dot"></label>
+                    <label for="slide-4" class="dot"></label>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="duvidas" class="secao-padrao bg-claro2">
+        <div class="container-sm">
+            <span class="tagline-azul">DÚVIDAS E SUPORTE</span>
+            <h2 class="titulo-secao">Dúvidas comuns</h2>
+            <p class="subtexto-secao">Confira as respostas para as perguntas mais frequentes.</p>
+
+            <div class="sanfona-container">
+                <details class="sanfona-item">
+                    <summary class="sanfona-pergunta">Quem pode se inscrever nos cursos eletivos?</summary>
+                    <p class="sanfona-resposta">Apenas alunos regularmente matriculados no Ensino Médio da nossa escola. Estudantes do Ensino Fundamental ou de outras instituições não são elegíveis nesta fase do edital.</p>
+                </details>
+
+                <details class="sanfona-item">
+                    <summary class="sanfona-pergunta">Como é feita a alocação de vagas e qual o critério?</summary>
+                    <p class="sanfona-resposta">A alocação prioriza a ordem de interesse e o rendimento escolar. Caso o número de inscritos supere as vagas de uma turma, o desempate será realizado através de um sorteio eletrônico auditável e transparente.</p>
+                </details>
+
+                <details class="sanfona-item">
+                    <summary class="sanfona-pergunta">Posso escolher mais de uma trilha/curso?</summary>
+                    <p class="sanfona-resposta">Sim. O sistema permite que você selecione até 3 opções distintas, classificando-as em 1ª, 2ª e 3ª opção. Isso aumenta significativamente suas chances de alocação caso sua primeira escolha atinja a capacidade máxima.</p>
+                </details>
+
+                <details class="sanfona-item">
+                    <summary class="sanfona-pergunta">Os cursos têm carga horária e geram certificado?</summary>
+                    <p class="sanfona-resposta">Sim, todos os cursos ofertados possuem carga horária registrada. O certificado será emitido ao final do semestre e anexado ao histórico escolar, exigindo frequência mínima de 75% e nota média superior a 5,0.</p>
+                </details>
+
+                <details class="sanfona-item">
+                    <summary class="sanfona-pergunta">Perdi o prazo de inscrição. O que faço agora?</summary>
+                    <p class="sanfona-resposta">As inscrições fora do prazo estipulado no Edital nº 02/2026 só poderão ser realizadas diretamente na Secretaria da escola, mediante abertura de requerimento e análise da existência de vagas residuais.</p>
+                </details>
+
+                <details class="sanfona-item">
+                    <summary class="sanfona-pergunta">Onde verifico o resultado final do sorteio?</summary>
+                    <p class="sanfona-resposta">O resultado oficial será publicado neste mesmo portal no dia 23/05 às 18h. Você poderá realizar o login no sistema com sua matrícula para verificar em qual curso foi alocado.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="secao-padrao">
+        <div class="container contato-layout">
+            <div class="contato-form-area">
+                <span class="tagline-azul">FALE CONOSCO</span>
+                <h2 class="titulo-secao">Contato e localização</h2>
+                <p class="subtexto-secao">Ficou com dúvidas? Mande uma mensagem para a coordenação.</p>
+
+                <form class="form-contato">
+                    <div class="form-linha">
+                        <div class="form-grupo"><label>Nome do estudante</label><input type="text" placeholder="Seu nome"></div>
+                        <div class="form-grupo"><label>Matrícula</label><input type="text" placeholder="Ex: 2026001"></div>
                     </div>
-                    
-                    <div class="campo">
-                        <label>ASSUNTO</label>
-                        <input type="text" placeholder="Dúvida sobre inscrição / Documentação / Prazos / Outro">
-                    </div>
-                    
-                    <div class="campo">
-                        <label>MENSAGEM</label>
-                        <textarea rows="4" placeholder="Descreva sua dúvida ou solicitação..."></textarea>
-                    </div>
-                    
-                    <button type="button" class="botao-primario botao-enviar">Enviar mensagem</button>
+                    <div class="form-grupo"><label>Mensagem</label><textarea placeholder="Escreva sua dúvida..."></textarea></div>
+                    <button type="button" class="btn btn-primario btn-enviar">Enviar mensagem</button>
                 </form>
             </div>
-            
-            <div class="endereco-contato">
-                <strong>Endereço</strong>
-                <p>📍 Quadra 05 Área Especial - Sobradinho<br>Brasília – DF, CEP 73000-010</p>
-                
-                <strong class="espaco-topo">Contato</strong>
-                <p>📞 (61) 9999-9999<br>✉ secretaria@nossaescola.edu.br</p>
-                
-                <strong class="espaco-topo">Horário</strong>
-                <p>⏰ Seg a Sex: 08h-12h e 14h-18h<br>Sem atendimento aos sábados e feriados.</p>
+
+            <div class="contato-info-area">
+                <div class="info-bloco"><h4>Escola</h4><p>Centro Educacional 03 de Sobradinho</p></div>
+                <div class="info-bloco"><h4>Endereço</h4><p>Quadra 05 Área Especial, Sobradinho - DF</p></div>
+                <div class="info-bloco"><h4>Dúvidas</h4><p>(61) 3901-4321<br>coordenacao@ced03sobradinho.edu.br</p></div>
             </div>
         </div>
     </section>
 
-    <div class="chamada-final">
-        <div class="chamada-texto">
-            <h2>Confirme sua vaga antes de 23/05 às 18h</h2>
-            <p>Resultado da 1ª chamada já disponível. Acesse com sua matrícula.</p>
+  
+
+     <footer>
+        <div class="pre-rodape">
+            <p class="p-confirme">Confirme sua vaga antes de 23/05 às 18h</p>
+            <input class="btn-sistema" type="button" value="Acessar o Sistema" onclick="location.href='login.html'">
+            <p class="p-resultado">Resultado da 1ª chamada já disponível. Acesse com sua matrícula.</p>
         </div>
-        <button class="botao-branco">Acessar o Sistema</button>
-    </div>
 
-    <footer class="rodape-principal">
-        <div class="rodape-container">
-            <div class="rodape-marca">
-                <div class="logo">
-                    <div class="logo-icone icone-branco">NE</div>
-                    <div class="logo-texto">
-                        <strong>NossaEscola</strong><br>
-                        <small>CED 03 SOBRADINHO</small>
-                    </div>
-                </div>
-                <p class="endereco-rodape"><small>Quadra 05 AE - Sobradinho<br>Brasília - DF - CEP 73000-010</small></p>
+        <div class="container-grid">
+            <div class="item">
+                <a href="#" class="link-rodape">
+                    <img src="IMG/LOGO.png" alt="Logo CED 03">
+                    <p>CED 03 de Sobradinho CCMDF</p>
+                    <p>Qd 5 AE - Sobradinho</p>
+                    <p>Brasília – DF · CEP 73000-010</p>
+                </a>
             </div>
-            
-            <div class="rodape-links">
-                <strong>NAVEGAÇÃO</strong>
-                <ul>
-                    <li><a href="#">Início - Cursos</a></li>
-                    <li><a href="#">Horários - Inscrição</a></li>
-                    <li><a href="#">Avisos - Contato</a></li>
-                </ul>
+            <div class="item">
+                <h3>NAVEGAÇÃO</h3><br>
+                <p>Início · Cursos</p> 
+                <p>Horários · Inscrição</p>
+                <p>Avisos · Contato</p>
             </div>
-
-            <div class="rodape-links">
-                <strong>ACESSO AO SISTEMA</strong>
-                <ul>
-                    <li><a href="#">Login — Estudante</a></li>
-                    <li><a href="#">Login — Responsável</a></li>
-                    <li><a href="#">Login — Professor</a></li>
-                    <li><a href="#">Login — Secretaria / Gestão</a></li>
-                </ul>
+            <div class="item">
+                <h3>ACESSO AO SISTEMA</h3><br>
+                <p>Login — Estudante</p>
+                <p>Login — Responsável</p>
+                <p>Login — Professor</p>
+                <p>Login — Secretaria · Gestão</p>
             </div>
-
-            <div class="rodape-links">
-                <strong>ATENDIMENTO</strong>
-                <ul>
-                    <li>(61) 9999-9999</li>
-                    <li>secretaria@nossaescola.edu.br</li>
-                    <li>Seg-Sex 08h-12h / 14h-18h</li>
-                </ul>
+            <div class="item">
+                <h3>ATENDIMENTO</h3><br>
+                <p>(61) 9999-9999</p>
+                <p>secretaria@nossaescola.edu.br</p>
+                <p>Seg–Sex 08h–12h / 14h–18h</p>
             </div>
         </div>
-        <div class="rodape-direitos">
-            <small>Grupo 3 - Projeto Integrador TSI 1/2026 - Instituto Federal de Brasília - Todos os direitos reservados</small>
+
+        <div class="pos-rodape">
+            <p>Grupo 3 · Projeto Integrador TSI 1/2026 · Desenvolvido por João Soares, Francisco Meirelles e Eraldo Gonçalves</p>
         </div>
     </footer>
 
+    
+    
 </body>
+
 </html>

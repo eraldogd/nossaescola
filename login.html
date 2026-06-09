@@ -1,79 +1,66 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acesso - Nossa Escola</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Acesso ao Sistema - Nossa Escola</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="pagina-login-bg">
+<body>
 
-    <header class="topo-login">
-        <a href="index.html" class="botao-voltar-login">← Voltar ao site</a>
-        
-        <div class="logo-login-centro">
-            <div class="logo-icone-login">NE</div>
-            <div class="logo-texto-login">
-                <strong>NossaEscola</strong>
-                <small>GESTÃO EDUCACIONAL</small>
-            </div>
+    <header class="header-login">
+        <a href="index.html" class="btn-voltar">← Voltar ao site</a>
+        <div class="logo-login">
+            <img src="IMG/LOGO.png" alt="Logo" width="30">
+            <h1>NossaEscola <small>GESTÃO EDUCACIONAL</small></h1>
         </div>
     </header>
 
-    <main class="login-wrapper">
-        <div class="card-login-glass">
+    <main class="bg-login">
+        <div class="card-login">
             <h2>Acessar Sistema</h2>
-            <p>Entre com suas credenciais para acessar a plataforma</p>
+            <p class="subtitle-login">Entre com suas credenciais para acessar a plataforma</p>
 
-            <form class="form-login">
-                <div>
-                    <label>E-mail</label>
-                    <input type="email" placeholder="seu@email.com">
+            <form class="form-login" action="#" method="POST">
+                <div class="form-grupo">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" placeholder="seu@email.com" required>
                 </div>
-                <div>
-                    <label>Senha</label>
-                    <input type="password" placeholder="••••••">
+                <div class="form-grupo">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" placeholder="••••••" required>
                 </div>
-                <button type="button" class="btn-entrar-login">Entrar</button>
+                
+                <button type="submit" class="btn btn-primario btn-entrar">Entrar</button>
             </form>
 
-            <p class="divisor-login">Acesso rápido para demonstração</p>
+            <div class="demo-section">
+                <p class="demo-title">Acesso rápido para demonstração</p>
+                <div class="demo-grid">
+                    
+                    <button type="button" class="card-demo">
+                        <strong>👤 Aluno</strong>
+                        <span>Selecionar cursos de interesse</span>
+                    </button>
+                    
+                    <button type="button" class="card-demo">
+                        <strong>📖 Professor</strong>
+                        <span>Ver turmas e alunos</span>
+                    </button>
+                    
+                    <button type="button" class="card-demo">
+                        <strong>📋 Secretaria</strong>
+                        <span>Gerenciar matrículas</span>
+                    </button>
+                    
+                    <button type="button" class="card-demo">
+                        <strong>⚙️ Gestão</strong>
+                        <span>Configurar distribuição</span>
+                    </button>
 
-            <div class="grid-botoes-demo">
-                <a href="estudante.html" class="btn-demo">
-                    <div class="btn-demo-cabecalho">
-                        <span class="btn-demo-icone">👤</span>
-                        <strong>Aluno</strong>
-                    </div>
-                    <span>Selecionar cursos de<br>interesse</span>
-                </a>
-                
-                <a href="professor.html" class="btn-demo">
-                    <div class="btn-demo-cabecalho">
-                        <span class="btn-demo-icone">📖</span>
-                        <strong>Professor</strong>
-                    </div>
-                    <span>Ver turmas e alunos</span>
-                </a>
-                
-                <a href="secretaria.html" class="btn-demo">
-                    <div class="btn-demo-cabecalho">
-                        <span class="btn-demo-icone">📋</span>
-                        <strong>Secretaria</strong>
-                    </div>
-                    <span>Gerenciar matrículas</span>
-                </a>
-                
-                <a href="gestao.html" class="btn-demo">
-                    <div class="btn-demo-cabecalho">
-                        <span class="btn-demo-icone">⚙️</span>
-                        <strong>Gestão</strong>
-                    </div>
-                    <span>Configurar<br>distribuição</span>
-                </a>
+                </div>
+                <p class="demo-footer">Senha para todos os usuários demo: 123456</p>
             </div>
-            
-            <p class="senha-demo-texto">Senha para todos os usuários demo: 123456</p>
         </div>
     </main>
 
