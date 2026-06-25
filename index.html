@@ -3,25 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="PI 2026 - GRUPO 03">
-    <meta name="description"  content="Sistema de gerenciamento de vagas e cursos">
+    <meta name="author" content="PI 2026 IFB - GRUPO 03">
+    <meta name="description" content="Sistema de gerenciamento de vagas e cursos para educação básica">
     <title>Nossa Escola</title>
-    <link rel="stylesheet" href="CSS/style.css">
-    
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <div id="alerta-topo">
-        <span class="aviso-prazo">PRAZO</span>
-        <span class="texto-alerta">Confirmação de vagas — Resultado em 23/05 às 18h.</span>
+    <input type="checkbox" id="fechar-aviso" class="aviso-check">
+    <div id="aviso-topo">
+        <span class="etiqueta-prazo">PRAZO</span>
+        <span>Confirmação de vagas — Resultado em 23/05 às 18h.</span>
+        <label for="fechar-aviso" class="aviso-fechar" aria-label="Fechar aviso">×</label>
     </div>
 
     <header>
-        <nav class="nav-principal">
-            <input type="checkbox" id="check-menu" style="display: none;">
-            <div class="logo">
-                <img src="IMG/LOGO.png" alt="Logo CED 03" class="logo-img">
-                <div class="logo-texto">
+        <nav class="navegacao-principal">
+            <input type="checkbox" id="check-menu" class="menu-check">
+            <div class="marca">
+                <img src="img/logo.png" alt="Logo CED 03" class="marca-imagem">
+                <div class="marca-texto">
                     <h1>Nossa Escola</h1>
                     <span>CED 03 Sobradinho</span>
                 </div>
@@ -32,23 +33,23 @@
                 <a href="#duvidas">Dúvidas</a>
                 <a href="#contato">Contato</a>
                 <a href="#sobre">Sobre nós</a>
-                <a href="login.html" class="btn btn-primario btn-acesso-mobile">Acesso</a>
+                <a href="login.html" class="botao botao-primario botao-acesso-mobile">Acesso</a>
             </div>
             <div class="acoes-menu">
-                <a href="login.html" class="btn btn-primario btn-acesso">Acesso</a>
-                <label for="check-menu" id="botao-menu">☰</label>
+                <a href="login.html" class="botao botao-primario botao-acesso">Acesso</a>
+                <label for="check-menu" id="botao-menu" aria-label="Abrir menu"><span></span></label>
             </div>
         </nav>
     </header>
 
     <section id="hero">
-        <div class="container text-center">
+        <div class="container centralizado">
             <p class="hero-subtitulo">NOSSA ESCOLA</p>
-            <h2 class="hero-titulo">CREDENCIAMENTO DE VAGAS<br>EM CURSOS</h2>
+            <h2 class="hero-titulo">GERENCIAMENTO DE VAGAS<br>EM CURSOS</h2>
             <div class="hero-card">
                 <h3>Cursos 2026</h3>
                 <p>1º SEMESTRE - VAGAS ABERTAS</p>
-                <span class="hero-card-destaque">RESULTADO EM 23/05</span>
+                <span class="hero-destaque">RESULTADO EM 23/05</span>
             </div>
         </div>
     </section>
@@ -56,186 +57,254 @@
     <main id="sobre" class="secao-padrao">
         <div class="container sobre-container">
             <div class="sobre-texto">
-                <span class="tagline-azul">SOBRE A ESCOLA</span>
-                <h2 class="titulo-secao">Uma escola que transforma trajetórias.</h2>
+                <span class="etiqueta-azul">SOBRE A ESCOLA</span>
+                <h2 class="titulo-secao">Uma escola que transforma <span class="titulo-azul">trajetórias.</span></h2>
                 <p class="subtexto-secao">
-                    O Centro Educacional 03 de Sobradinho é uma instituição pública de ensino fundamental 
+                    O Centro Educacional 03 de Sobradinho é uma instituição pública de ensino fundamental
                     e de ensino médio comprometida com a formação integral dos estudantes.
                 </p>
                 <p class="subtexto-secao">
-                    Oferecemos cursos eletivos semestrais abertos a alunos matriculados no Ensino Médio. 
+                    Oferecemos cursos eletivos semestrais abertos a alunos matriculados no Ensino Médio.
                     A participação requer inscrição na coordenação, conforme o informe nº 02/2026.
                 </p>
             </div>
             <div class="sobre-carrossel">
                 <div class="carrossel-container">
-                    <img src="IMG/MAIN-1.jpg" alt="Foto 1" class="carrossel-foto ativo">
-                    <img src="IMG/MAIN-2.jpg" alt="Foto 2" class="carrossel-foto">
-                    <img src="IMG/MAIN-3.jpg" alt="Foto 3" class="carrossel-foto">
-                    <img src="IMG/MAIN-4.jpg" alt="Foto 4" class="carrossel-foto">
+                    <img src="img/main-1.jpg" alt="Foto 1" class="carrossel-foto">
+                    <img src="img/main-2.jpg" alt="Foto 2" class="carrossel-foto">
+                    <img src="img/main-3.jpg" alt="Foto 3" class="carrossel-foto">
+                    <img src="img/main-4.jpg" alt="Foto 4" class="carrossel-foto">
                 </div>
             </div>
         </div>
     </main>
 
-   <section id="amplie-inscricao" class="secao-padrao bg-claro">
-        <div class="container text-center">
-            
-            <span class="tagline-azul">1º SEMESTRE DE 2026</span>
-            <h2 class="titulo-secao">Amplie seu percurso.<br>Escolha até 3 opções de cursos.</h2>
-            <p class="subtexto-secao">As matrículas serão realizadas exclusivamente no sistema on-line.</p>
-            
-            <a href="login.html" class="btn btn-primario" style="margin-bottom: 50px;">Fazer login ➔</a>
+    <section id="inscricao" class="secao-padrao bloco-inscricao">
+        <div class="container centralizado">
+            <span class="etiqueta-centro">INSCRIÇÕES ABERTAS - 1º SEMESTRE 2026</span>
+            <h2 class="titulo-secao">Amplie seu <span class="titulo-azul">percurso.</span><br>Escolha até 3 opções de cursos.</h2>
+            <p class="subtexto-secao texto-inscricao">Alunos regularmente matriculados podem se inscrever em cursos. Classificação por coeficiente de rendimento.</p>
 
-            <div class="grid-cards" style="text-align: left;">
-                <div class="card-padrao">
-                    <div class="numero-passo">1</div>
-                    <h4>Lançamento</h4>
-                    <p>Regras para participação e quadro de vagas.</p>
-                </div>
-                
-                <div class="card-padrao">
-                    <div class="numero-passo">2</div>
-                    <h4>Inscrição</h4>
-                    <p>Os estudantes se inscrevem pelo sistema.</p>
-                </div>
-                
-                <div class="card-padrao">
-                    <div class="numero-passo">3</div>
-                    <h4>Sorteio</h4>
-                    <p>Processo de seleção dos inscritos.</p>
-                </div>
-                
-                <div class="card-padrao">
-                    <div class="numero-passo">4</div>
-                    <h4>Resultado final</h4>
-                    <p>Lista final de contemplados.</p>
-                </div>
-                
-                <div class="card-padrao passo-destaque">
-                    <div class="numero-passo">5</div>
-                    <h4>Confirmação</h4>
-                    <p>Entrega dos documentos na escola.</p>
-                </div>
+            <a href="login.html" class="botao botao-primario botao-chamada">Fazer login</a>
+
+            <h3 class="titulo-menor">Cursos disponíveis</h3>
+
+            <div class="mini-cursos">
+                <article class="mini-card">
+                    <span>Ensino Fundamental*</span>
+                    <img src="img/icon-livro-dark.svg" alt="">
+                </article>
+                <article class="mini-card">
+                    <span>Ensino Médio</span>
+                    <img src="img/icon-atomo-dark.svg" alt="">
+                </article>
+                <article class="mini-card">
+                    <span>Comunidade Escolar *</span>
+                    <img src="img/icon-grupo-dark.svg" alt="">
+                </article>
             </div>
 
+            <p class="nota-mini">* Em breve, cursos e atividades disponíveis para a comunidade</p>
+        </div>
+    </section>
+
+    <section class="secao-padrao bloco-processo">
+        <div class="container">
+            <span class="etiqueta-azul">COMO FAZER</span>
+            <h2 class="titulo-secao">Processo de <span class="titulo-azul">inscrição</span></h2>
+            <p class="subtexto-secao texto-processo">Siga as 5 etapas. Em caso de dúvida, consulte o Edital ou entre em contato com a Coordenação Pedagógica.</p>
+
+            <div class="grade-cards cards-esquerda">
+                <div class="card-padrao">
+                    <div class="numero-passo">1</div>
+                    <h4>Acesse o sistema</h4>
+                    <p>Login com matrícula e senha institucional.</p>
+                </div>
+                <div class="card-padrao">
+                    <div class="numero-passo">2</div>
+                    <h4>Escolha até 3 cursos</h4>
+                    <p>Selecione em ordem de preferência.</p>
+                </div>
+                <div class="card-padrao">
+                    <div class="numero-passo">3</div>
+                    <h4>Aguarde</h4>
+                    <p>Ordenação por coeficiente de rendimento.</p>
+                </div>
+                <div class="card-padrao">
+                    <div class="numero-passo">4</div>
+                    <h4>Consulte resultado</h4>
+                    <p>Publicado no sistema em 20/05.</p>
+                </div>
+                <div class="card-padrao passo-destaque">
+                    <div class="numero-passo">5</div>
+                    <h4>Confirme a vaga</h4>
+                    <p>A prazo até 23/05 às 18h.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="info-importante">
+        <div class="container">
+            <h2 class="titulo-info">Informações importantes</h2>
+            <div class="grade-info">
+                <article class="card-info">
+                    <h3>Período de inscrições</h3>
+                    <p>12-19/05/2026 encerrado. Resultado preliminar em 20/05. Confirmação até 23/05 às 18h.</p>
+                </article>
+                <article class="card-info">
+                    <h3>Vagas disponíveis</h3>
+                    <p>102 vagas distribuídas em 5 cursos. Classificação por coeficiente de rendimento acumulado.</p>
+                </article>
+                <article class="card-info">
+                    <h3>Custo</h3>
+                    <p>Completamente gratuito para alunos regularmente matriculados, conforme a Resolução Interna nº 12/2024.</p>
+                </article>
+                <article class="card-info">
+                    <h3>Início das aulas</h3>
+                    <p>02/06/2026. Encerramento em dezembro. Aulas presenciais.</p>
+                </article>
+            </div>
         </div>
     </section>
 
     <section id="cursos" class="secao-padrao">
         <div class="container">
-            <span class="tagline-azul">CURSOS OFERTADOS</span>
-            <h2 class="titulo-secao">Cursos disponíveis</h2>
-            <p class="subtexto-secao">Navegue pelo nosso catálogo de cursos.</p>
+            <span class="etiqueta-azul">ESCOLHA SEU CURSO</span>
+            <h2 class="titulo-secao">Cursos <span class="titulo-azul">disponíveis</span></h2>
+            <p class="subtexto-secao">Navegue pelos 5 cursos disponíveis para este semestre.</p>
 
-            <div class="css-carousel">
+            
+
+            <div class="carrossel-cursos">
                 <input type="radio" name="slider" id="slide-1" checked>
                 <input type="radio" name="slider" id="slide-2">
                 <input type="radio" name="slider" id="slide-3">
                 <input type="radio" name="slider" id="slide-4">
+                <input type="radio" name="slider" id="slide-5">
 
-                <div class="carousel-cards">
-                    
-                    <div class="card-wrapper">
-                        <label for="slide-4" class="btn-seta">⟨</label>
+                <div class="carrossel-cards">
+                    <div class="carrossel-envoltorio">
+                        <label for="slide-5" class="botao-seta" aria-label="Curso anterior">‹</label>
                         <div class="card-detalhe-curso">
-                            <div class="card-topo-curso">
-                                <h3>Matemática Avançada</h3>
-                                <span class="vagas-badge">30 vagas</span>
-                            </div>
-                            <div class="card-grid-info">
-                                <div class="info-item"><span>Horário</span><strong>Seg/Qua 14h-16h</strong></div>
-                                <div class="info-item"><span>Duração</span><strong>6 meses</strong></div>
-                                <div class="info-item"><span>Nível</span><strong>Avançado</strong></div>
-                            </div>
-                            <p class="card-descricao">Curso de matemática para alunos do ensino médio com foco em preparação para vestibulares.</p>
-                            <div class="card-rodape-curso">
-                                <span class="prof-info">Prof. Carlos Silva</span>
-                                <a href="login.html" class="btn btn-primario">Fazer inscrição</a>
-                            </div>
-                        </div>
-                        <label for="slide-2" class="btn-seta">⟩</label>
-                    </div>
-
-                    <div class="card-wrapper">
-                        <label for="slide-1" class="btn-seta">⟨</label>
-                        <div class="card-detalhe-curso">
-                            <div class="card-topo-curso">
-                                <h3>Português e Redação</h3>
-                                <span class="vagas-badge">25 vagas</span>
-                            </div>
-                            <div class="card-grid-info">
-                                <div class="info-item"><span>Horário</span><strong>Ter/Qui 10h-12h</strong></div>
-                                <div class="info-item"><span>Duração</span><strong>6 meses</strong></div>
-                                <div class="info-item"><span>Nível</span><strong>Intermediário</strong></div>
-                            </div>
-                            <p class="card-descricao">Aperfeiçoamento em língua portuguesa e técnicas de redação dissertativa.</p>
-                            <div class="card-rodape-curso">
-                                <span class="prof-info">Prof. Ana Santos</span>
-                                <a href="login.html" class="btn btn-primario">Fazer inscrição</a>
-                            </div>
-                        </div>
-                        <label for="slide-3" class="btn-seta">⟩</label>
-                    </div>
-
-                    <div class="card-wrapper">
-                        <label for="slide-2" class="btn-seta">⟨</label>
-                        <div class="card-detalhe-curso">
-                            <div class="card-topo-curso">
+                            <div class="topo-card-curso">
                                 <h3>Programação Web</h3>
-                                <span class="vagas-badge">25 vagas</span>
+                                <span class="etiqueta-vagas">18 vagas</span>
                             </div>
-                            <div class="card-grid-info">
-                                <div class="info-item"><span>Horário</span><strong>Ter/Qui 14h-16h</strong></div>
-                                <div class="info-item"><span>Duração</span><strong>8 meses</strong></div>
-                                <div class="info-item"><span>Nível</span><strong>Básico</strong></div>
+                            <div class="grade-dados-curso">
+                                <div class="item-dado"><span>Dias</span><strong>Seg / Qua</strong></div>
+                                <div class="item-dado"><span>Horário</span><strong>14h - 16h</strong></div>
+                                <div class="item-dado"><span>Turno</span><strong>Tarde</strong></div>
                             </div>
-                            <p class="card-descricao">Introdução ao desenvolvimento web com HTML, CSS e JavaScript.</p>
-                            <div class="card-rodape-curso">
-                                <span class="prof-info">Prof. João Oliveira</span>
-                                <a href="login.html" class="btn btn-primario">Fazer inscrição</a>
+                            <p class="descricao-curso">Desenvolvimento front-end avançado utilizando linguagens modernas: HTML5 estruturado, CSS estrutural responsivo e arquitetura básica com JavaScript.</p>
+                            <div class="rodape-card-curso">
+                                <span>Prof. Carlos Silva</span>
+                                <a href="login.html" class="botao botao-primario">Fazer inscrição</a>
                             </div>
                         </div>
-                        <label for="slide-4" class="btn-seta">⟩</label>
+                        <label for="slide-2" class="botao-seta" aria-label="Proximo curso">›</label>
                     </div>
 
-                    <div class="card-wrapper">
-                        <label for="slide-3" class="btn-seta">⟨</label>
+                    <div class="carrossel-envoltorio">
+                        <label for="slide-1" class="botao-seta" aria-label="Curso anterior">‹</label>
                         <div class="card-detalhe-curso">
-                            <div class="card-topo-curso">
-                                <h3>História do Brasil</h3>
-                                <span class="vagas-badge">35 vagas</span>
+                            <div class="topo-card-curso">
+                                <h3>Matemática Avançada</h3>
+                                <span class="etiqueta-vagas">25 vagas</span>
                             </div>
-                            <div class="card-grid-info">
-                                <div class="info-item"><span>Horário</span><strong>Seg/Qua 16h-18h</strong></div>
-                                <div class="info-item"><span>Duração</span><strong>5 meses</strong></div>
-                                <div class="info-item"><span>Nível</span><strong>Básico</strong></div>
+                            <div class="grade-dados-curso">
+                                <div class="item-dado"><span>Dias</span><strong>Seg / Qua</strong></div>
+                                <div class="item-dado"><span>Horário</span><strong>14h - 16h</strong></div>
+                                <div class="item-dado"><span>Turno</span><strong>Tarde</strong></div>
                             </div>
-                            <p class="card-descricao">Estudo aprofundado da história brasileira do período colonial à atualidade.</p>
-                            <div class="card-rodape-curso">
-                                <span class="prof-info">Prof. Mariana Costa</span>
-                                <a href="login.html" class="btn btn-primario">Fazer inscrição</a>
+                            <p class="descricao-curso">Curso de matemática para alunos do ensino médio com foco em preparação para vestibulares.</p>
+                            <div class="rodape-card-curso">
+                                <span>Prof. Carlos Silva</span>
+                                <a href="login.html" class="botao botao-primario">Fazer inscrição</a>
                             </div>
                         </div>
-                        <label for="slide-1" class="btn-seta">⟩</label>
+                        <label for="slide-3" class="botao-seta" aria-label="Proximo curso">›</label>
                     </div>
 
+                    <div class="carrossel-envoltorio">
+                        <label for="slide-2" class="botao-seta" aria-label="Curso anterior">‹</label>
+                        <div class="card-detalhe-curso">
+                            <div class="topo-card-curso">
+                                <h3>Português e Redação</h3>
+                                <span class="etiqueta-vagas">25 vagas</span>
+                            </div>
+                            <div class="grade-dados-curso">
+                                <div class="item-dado"><span>Dias</span><strong>Ter / Qui</strong></div>
+                                <div class="item-dado"><span>Horário</span><strong>10h - 12h</strong></div>
+                                <div class="item-dado"><span>Turno</span><strong>Manhã</strong></div>
+                            </div>
+                            <p class="descricao-curso">Aperfeiçoamento em língua portuguesa e técnicas de redação dissertativa.</p>
+                            <div class="rodape-card-curso">
+                                <span>Prof. Ana Santos</span>
+                                <a href="login.html" class="botao botao-primario">Fazer inscrição</a>
+                            </div>
+                        </div>
+                        <label for="slide-4" class="botao-seta" aria-label="Proximo curso">›</label>
+                    </div>
+
+                    <div class="carrossel-envoltorio">
+                        <label for="slide-3" class="botao-seta" aria-label="Curso anterior">‹</label>
+                        <div class="card-detalhe-curso">
+                            <div class="topo-card-curso">
+                                <h3>Química Experimental</h3>
+                                <span class="etiqueta-vagas">20 vagas</span>
+                            </div>
+                            <div class="grade-dados-curso">
+                                <div class="item-dado"><span>Dias</span><strong>Sex</strong></div>
+                                <div class="item-dado"><span>Horário</span><strong>14h - 17h</strong></div>
+                                <div class="item-dado"><span>Turno</span><strong>Tarde</strong></div>
+                            </div>
+                            <p class="descricao-curso">Curso prático de química com experimentos laboratoriais e atividades orientadas.</p>
+                            <div class="rodape-card-curso">
+                                <span>Prof. Roberto Lima</span>
+                                <a href="login.html" class="botao botao-primario">Fazer inscrição</a>
+                            </div>
+                        </div>
+                        <label for="slide-5" class="botao-seta" aria-label="Proximo curso">›</label>
+                    </div>
+
+                    <div class="carrossel-envoltorio">
+                        <label for="slide-4" class="botao-seta" aria-label="Curso anterior">‹</label>
+                        <div class="card-detalhe-curso">
+                            <div class="topo-card-curso">
+                                <h3>História do Brasil</h3>
+                                <span class="etiqueta-vagas">30 vagas</span>
+                            </div>
+                            <div class="grade-dados-curso">
+                                <div class="item-dado"><span>Dias</span><strong>Seg / Qua</strong></div>
+                                <div class="item-dado"><span>Horário</span><strong>10h - 12h</strong></div>
+                                <div class="item-dado"><span>Turno</span><strong>Manhã</strong></div>
+                            </div>
+                            <p class="descricao-curso">Estudo aprofundado da história brasileira do período colonial à atualidade.</p>
+                            <div class="rodape-card-curso">
+                                <span>Prof. Mariana Costa</span>
+                                <a href="login.html" class="botao botao-primario">Fazer inscrição</a>
+                            </div>
+                        </div>
+                        <label for="slide-1" class="botao-seta" aria-label="Proximo curso">›</label>
+                    </div>
                 </div>
-                
-                <div class="cursos-dots">
-                    <label for="slide-1" class="dot"></label>
-                    <label for="slide-2" class="dot"></label>
-                    <label for="slide-3" class="dot"></label>
-                    <label for="slide-4" class="dot"></label>
+
+                <div class="pontos-carrossel">
+                    <label for="slide-1" class="ponto"></label>
+                    <label for="slide-2" class="ponto"></label>
+                    <label for="slide-3" class="ponto"></label>
+                    <label for="slide-4" class="ponto"></label>
+                    <label for="slide-5" class="ponto"></label>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="duvidas" class="secao-padrao bg-claro2">
-        <div class="container-sm">
-            <span class="tagline-azul">DÚVIDAS E SUPORTE</span>
-            <h2 class="titulo-secao">Dúvidas comuns</h2>
+    <section id="duvidas" class="secao-padrao fundo-branco">
+        <div class="container-pequeno">
+            <span class="etiqueta-azul">DÚVIDAS E SUPORTE</span>
+            <h2 class="titulo-secao">Esclarecendo <span class="titulo-azul">dúvidas</span></h2>
             <p class="subtexto-secao">Confira as respostas para as perguntas mais frequentes.</p>
 
             <div class="sanfona-container">
@@ -243,27 +312,22 @@
                     <summary class="sanfona-pergunta">Quem pode se inscrever nos cursos eletivos?</summary>
                     <p class="sanfona-resposta">Apenas alunos regularmente matriculados no Ensino Médio da nossa escola. Estudantes do Ensino Fundamental ou de outras instituições não são elegíveis nesta fase do edital.</p>
                 </details>
-
                 <details class="sanfona-item">
                     <summary class="sanfona-pergunta">Como é feita a alocação de vagas e qual o critério?</summary>
                     <p class="sanfona-resposta">A alocação prioriza a ordem de interesse e o rendimento escolar. Caso o número de inscritos supere as vagas de uma turma, o desempate será realizado através de um sorteio eletrônico auditável e transparente.</p>
                 </details>
-
                 <details class="sanfona-item">
                     <summary class="sanfona-pergunta">Posso escolher mais de uma trilha/curso?</summary>
                     <p class="sanfona-resposta">Sim. O sistema permite que você selecione até 3 opções distintas, classificando-as em 1ª, 2ª e 3ª opção. Isso aumenta significativamente suas chances de alocação caso sua primeira escolha atinja a capacidade máxima.</p>
                 </details>
-
                 <details class="sanfona-item">
                     <summary class="sanfona-pergunta">Os cursos têm carga horária e geram certificado?</summary>
                     <p class="sanfona-resposta">Sim, todos os cursos ofertados possuem carga horária registrada. O certificado será emitido ao final do semestre e anexado ao histórico escolar, exigindo frequência mínima de 75% e nota média superior a 5,0.</p>
                 </details>
-
                 <details class="sanfona-item">
                     <summary class="sanfona-pergunta">Perdi o prazo de inscrição. O que faço agora?</summary>
                     <p class="sanfona-resposta">As inscrições fora do prazo estipulado no Edital nº 02/2026 só poderão ser realizadas diretamente na Secretaria da escola, mediante abertura de requerimento e análise da existência de vagas residuais.</p>
                 </details>
-
                 <details class="sanfona-item">
                     <summary class="sanfona-pergunta">Onde verifico o resultado final do sorteio?</summary>
                     <p class="sanfona-resposta">O resultado oficial será publicado neste mesmo portal no dia 23/05 às 18h. Você poderá realizar o login no sistema com sua matrícula para verificar em qual curso foi alocado.</p>
@@ -273,23 +337,23 @@
     </section>
 
     <section id="contato" class="secao-padrao">
-        <div class="container contato-layout">
-            <div class="contato-form-area">
-                <span class="tagline-azul">FALE CONOSCO</span>
-                <h2 class="titulo-secao">Contato e localização</h2>
+        <div class="container layout-contato">
+            <div class="area-formulario">
+                <span class="etiqueta-azul">FALE CONOSCO</span>
+                <h2 class="titulo-secao">Contato e <span class="titulo-azul">localização</span></h2>
                 <p class="subtexto-secao">Ficou com dúvidas? Mande uma mensagem para a coordenação.</p>
 
-                <form class="form-contato">
-                    <div class="form-linha">
-                        <div class="form-grupo"><label>Nome do estudante</label><input type="text" placeholder="Seu nome"></div>
-                        <div class="form-grupo"><label>Matrícula</label><input type="text" placeholder="Ex: 2026001"></div>
+                <form class="formulario-contato">
+                    <div class="linha-formulario">
+                        <div class="grupo-campo"><label>Nome do estudante</label><input type="text" placeholder="Seu nome"></div>
+                        <div class="grupo-campo"><label>Matrícula</label><input type="text" placeholder="Ex: 2026001"></div>
                     </div>
-                    <div class="form-grupo"><label>Mensagem</label><textarea placeholder="Escreva sua dúvida..."></textarea></div>
-                    <button type="button" class="btn btn-primario btn-enviar">Enviar mensagem</button>
+                    <div class="grupo-campo"><label>Mensagem</label><textarea placeholder="Escreva sua dúvida..."></textarea></div>
+                    <button type="button" class="botao botao-primario botao-enviar">Enviar mensagem</button>
                 </form>
             </div>
 
-            <div class="contato-info-area">
+            <div class="area-informacoes">
                 <div class="info-bloco"><h4>Escola</h4><p>Centro Educacional 03 de Sobradinho</p></div>
                 <div class="info-bloco"><h4>Endereço</h4><p>Quadra 05 Área Especial, Sobradinho - DF</p></div>
                 <div class="info-bloco"><h4>Dúvidas</h4><p>(61) 3901-4321<br>coordenacao@ced03sobradinho.edu.br</p></div>
@@ -297,38 +361,36 @@
         </div>
     </section>
 
-  
-
-     <footer>
+    <footer>
         <div class="pre-rodape">
-            <p class="p-confirme">Confirme sua vaga antes de 23/05 às 18h</p>
-            <input class="btn-sistema" type="button" value="Acessar o Sistema" onclick="location.href='login.html'">
-            <p class="p-resultado">Resultado da 1ª chamada já disponível. Acesse com sua matrícula.</p>
+            <p class="pre-rodape-titulo">Confirme sua vaga antes de 23/05 às 18h</p>
+            <a class="botao-sistema" href="login.html">Acessar o Sistema</a>
+            <p class="pre-rodape-subtitulo">Resultado da 1ª chamada já disponível. Acesse com sua matrícula.</p>
         </div>
 
-        <div class="container-grid">
-            <div class="item">
+        <div class="grade-rodape">
+            <div class="coluna-rodape">
                 <a href="#" class="link-rodape">
-                    <img src="IMG/LOGO.png" alt="Logo CED 03">
+                    <img src="img/logo.png" alt="Logo CED 03">
                     <p>CED 03 de Sobradinho CCMDF</p>
                     <p>Qd 5 AE - Sobradinho</p>
                     <p>Brasília – DF · CEP 73000-010</p>
                 </a>
             </div>
-            <div class="item">
+            <div class="coluna-rodape">
                 <h3>NAVEGAÇÃO</h3><br>
-                <p>Início · Cursos</p> 
+                <p>Início · Cursos</p>
                 <p>Horários · Inscrição</p>
                 <p>Avisos · Contato</p>
             </div>
-            <div class="item">
+            <div class="coluna-rodape">
                 <h3>ACESSO AO SISTEMA</h3><br>
                 <p>Login — Estudante</p>
                 <p>Login — Responsável</p>
                 <p>Login — Professor</p>
                 <p>Login — Secretaria · Gestão</p>
             </div>
-            <div class="item">
+            <div class="coluna-rodape">
                 <h3>ATENDIMENTO</h3><br>
                 <p>(61) 9999-9999</p>
                 <p>secretaria@nossaescola.edu.br</p>
@@ -340,9 +402,20 @@
             <p>Grupo 3 · Projeto Integrador TSI 1/2026 · Desenvolvido por João Soares, Francisco Meirelles e Eraldo Gonçalves</p>
         </div>
     </footer>
+    <script>
+        const observadorAnimacao = new IntersectionObserver((entradas) => {
+            entradas.forEach((entrada) => {
+                if (entrada.isIntersecting) {
+                    entrada.target.classList.add('apareceu');
+                    observadorAnimacao.unobserve(entrada.target);
+                }
+            });
+        }, { threshold: 0.35 });
 
-    
-    
+        document.querySelectorAll('.etiqueta-azul, .etiqueta-centro, .titulo-secao, .titulo-info').forEach((titulo) => {
+            titulo.classList.add('revelar-scroll');
+            observadorAnimacao.observe(titulo);
+        });
+    </script>
 </body>
-
 </html>

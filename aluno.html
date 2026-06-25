@@ -1,44 +1,135 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Área do Aluno — NossaEscola</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    .pagina-interna {
-      max-width: 900px;
-      margin: 60px auto;
-      padding: 0 24px;
-      text-align: center;
-    }
-    .pagina-interna h1 { font-size: 28px; margin-bottom: 12px; }
-    .pagina-interna p  { color: var(--cinza-texto); margin-bottom: 24px; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área do Aluno - Nossa Escola</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="corpo-painel">
 
-  <!-- reutiliza a mesma nav -->
-  <nav>
-    <div class="nav-inner">
-      <a class="logo" href="index.html">
-        <div class="logo-icone">NE</div>
-        <span>NossaEscola <small style="font-weight:400;font-size:10px">C03</small></span>
-      </a>
-      <ul class="nav-links">
-        <li><a href="index.html">← Início</a></li>
-        <li><a href="secretaria.html">Secretaria</a></li>
-        <li><a href="login.html" class="btn-acesso">Sair</a></li>
-      </ul>
-    </div>
-  </nav>
+    <aside class="painel-lateral">
+        <div class="painel-marca">
+            <span>Sistema</span>
+            <strong>Aluno</strong>
+            <small>Gestão Educacional</small>
+        </div>
 
-  <div class="pagina-interna">
-    <p class="label-secao">Área do Aluno</p>
-    <h1>Painel do Estudante</h1>
-    <p>Esta página será desenvolvida nas próximas interações. O CSS e a estrutura de navegação já estão prontos para reutilização.</p>
-    <a href="index.html" class="btn-primario">← Voltar à Landing Page</a>
-  </div>
+        <input type="checkbox" id="check-painel" class="painel-menu-check">
+        <label for="check-painel" class="painel-botao-menu"><span></span></label>
+
+        <nav class="painel-menu">
+            <a href="#" class="ativo">Painel Geral</a>
+            <span>Cursos</span>
+            <a href="#cursos-aluno">Cursos Disponíveis</a>
+            <a href="#resumo-aluno">Iniciar Inscrições</a>
+        </nav>
+
+        <a href="login.html" class="painel-sair">Sair</a>
+    </aside>
+
+    <main class="painel-principal painel-principal-aluno">
+        <section class="painel-topo" id="resumo-aluno">
+            <div>
+                <h1>Olá, Estudante!</h1>
+                <p>Selecione até 4 cursos de seu interesse</p>
+            </div>
+        </section>
+
+        <section class="painel-indicadores">
+            <div class="indicador">
+                <span>Selecionados</span>
+                <strong>0/4</strong>
+                <img class="indicador-icone" src="img/icon-card-selecionados.svg" alt="">
+            </div>
+            <div class="indicador">
+                <span>Matriculado</span>
+                <strong>0</strong>
+                <img class="indicador-icone" src="img/icon-card-matriculado.svg" alt="">
+            </div>
+            <div class="indicador">
+                <span>Pendentes</span>
+                <strong>0</strong>
+                <img class="indicador-icone" src="img/icon-card-matriculado.svg" alt="">
+            </div>
+            <div class="indicador">
+                <span>Sua turma</span>
+                <strong>1B</strong>
+                <img class="indicador-icone" src="img/icon-card-turma.svg" alt="">
+            </div>
+            <div class="indicador">
+                <span>Sua média</span>
+                <strong>8.5</strong>
+                <img class="indicador-icone" src="img/icon-card-media.svg" alt="">
+            </div>
+        </section>
+
+        <section id="cursos-aluno">
+            <h2 class="painel-titulo">Cursos Disponíveis</h2>
+
+            <div class="painel-cards">
+                <article class="curso-card">
+                    <div class="curso-icone"><img src="img/icon-calculadora.svg" alt=""></div>
+                    <div class="curso-conteudo">
+                        <span class="etiqueta-categoria fundo-azul">Exatas</span>
+                        <h3>Matemática Avançada</h3>
+                        <p>Curso de matemática para alunos do ensino médio com foco em preparação para vestibulares.</p>
+                        <small>Prof. Carlos Silva · 6 meses</small>
+                        <small>Seg/Qua 14h-16h · 25 vagas</small>
+                        <a href="#" class="botao botao-primario botao-curso">Selecionar este curso</a>
+                    </div>
+                </article>
+
+                <article class="curso-card">
+                    <div class="curso-icone"><img src="img/icon-livro.svg" alt=""></div>
+                    <div class="curso-conteudo">
+                        <span class="etiqueta-categoria fundo-laranja">Humanas</span>
+                        <h3>Português e Redação</h3>
+                        <p>Aperfeiçoamento em língua portuguesa e técnicas de redação dissertativa.</p>
+                        <small>Prof. Ana Santos · 6 meses</small>
+                        <small>Ter/Qui 10h-12h · 30 vagas</small>
+                        <a href="#" class="botao botao-primario botao-curso">Selecionar este curso</a>
+                    </div>
+                </article>
+
+                <article class="curso-card">
+                    <div class="curso-icone"><img src="img/icon-quimica.svg" alt=""></div>
+                    <div class="curso-conteudo">
+                        <span class="etiqueta-categoria fundo-azul">Exatas</span>
+                        <h3>Química Experimental</h3>
+                        <p>Curso prático de química com experimentos laboratoriais modernos e interativos.</p>
+                        <small>Prof. Roberto Lima · 4 meses</small>
+                        <small>Sex 14h-17h · 20 vagas</small>
+                        <a href="#" class="botao botao-primario botao-curso">Selecionar este curso</a>
+                    </div>
+                </article>
+
+                <article class="curso-card">
+                    <div class="curso-icone"><img src="img/icon-historia.svg" alt=""></div>
+                    <div class="curso-conteudo">
+                        <span class="etiqueta-categoria fundo-laranja">Humanas</span>
+                        <h3>História do Brasil</h3>
+                        <p>Estudo aprofundado da história brasileira do período colonial à atualidade.</p>
+                        <small>Prof. Mariana Costa · 5 meses</small>
+                        <small>Seg/Qua 10h-12h · 30 vagas</small>
+                        <a href="#" class="botao botao-primario botao-curso">Selecionar este curso</a>
+                    </div>
+                </article>
+
+                <article class="curso-card">
+                    <div class="curso-icone"><img src="img/icon-web.svg" alt=""></div>
+                    <div class="curso-conteudo">
+                        <span class="etiqueta-categoria fundo-vermelho">Tecnologia</span>
+                        <h3>Programação Web</h3>
+                        <p>Introdução ao desenvolvimento web com HTML, CSS e JavaScript.</p>
+                        <small>Prof. João Oliveira · 6 meses</small>
+                        <small>Ter/Qui 14h-16h · 25 vagas</small>
+                        <a href="#" class="botao botao-primario botao-curso">Selecionar este curso</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
 
 </body>
 </html>
